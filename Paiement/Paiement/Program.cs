@@ -25,8 +25,21 @@ internal class Program
         {
             Paypal.AfficheDetails();
         }
+        Utilisateur utilisateur1 = new Utilisateur("Habib Oumar");
+        List<Utilisateur> utilisateurs = new List<Utilisateur> { utilisateur1 };
+        foreach (var utilisateur in utilisateurs)
+        {
+            utilisateur.AjouterPaiement(paypal1);
+            utilisateur.AjouterPaiement(paypal2);
+            utilisateur.AjouterPaiement(carteCredit1);
+            utilisateur.AjouterPaiement(carteCredit2);
+            utilisateur.AjouterPaiement(carteCredit3);
 
+            utilisateur.Afficherinfos();
 
+        }
     }
 
+
 }
+
