@@ -15,6 +15,18 @@ internal class Program
         {
             CarteCredit.AfficherDetails();
         }
+        Paypal paypal1 = new Paypal("alhassane.diallo@gmail.com", 2500000, "Totalisé");
+        Paypal paypal2 = new Paypal("mariam@gmail.com", 15000, "Completer");
+
+        //Affichage des details de ces objets de la classe Paypal
+        List<Paypal> paypals = new List<Paypal> { paypal1, paypal2 };
+        Console.WriteLine("les comptes paypals sont :");
+        foreach (var Paypal in paypals)
+        {
+            Paypal.AfficheDetails();
+        }
+
 
     }
+
 }
